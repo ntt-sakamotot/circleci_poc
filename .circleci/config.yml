@@ -16,8 +16,8 @@ jobs:
           name: install-contrast 
           command: npm install @contrast/agent@4.37
       - run: 
-          name: tests
-          command: npm test
+          name: run contrast
+          command: npm contrast
 
 workflows:
   my-workflow:
