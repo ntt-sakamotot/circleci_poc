@@ -1,0 +1,11 @@
+api:  
+  url: https://app.contrastsecurity.com/Contrast
+  api_key: XTpwpG4FnQ0hHVJT5jnpW0i9lCBw1XL7
+  service_key: FZUEH5P67ZMTLL5A
+  user_name: agent_516a7010-26a7-4c03-b363-0af8fdcebad4@NttDataIntellilinkCorporation
+  ignore_cert_errors: true
+agent: 
+  service: 
+    grpc: true
+assess: 
+  enable_lazy_tracking: false
