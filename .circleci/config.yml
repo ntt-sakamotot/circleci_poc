@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  contrastsecurity: contrastsecurity/verify@0.3.0
+
 jobs:
   hello-job:
     docker:
@@ -12,6 +15,11 @@ jobs:
       - run: 
           name: tests
           command: npm test
+      - contrastsecurity/check-vulnerabilities:
+        application-id: helloworldcircleci
+        contrast-url: https://app.contrastsecurity.com/Contrast
+        # org-id: 
+        # severities: 
 
 workflows:
   my-workflow:
