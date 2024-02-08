@@ -13,6 +13,9 @@ jobs:
           name: install-dependencies 
           command: npm install 
       - run: 
+          name: install-contrast 
+          command: npm install @contrast/agent@4.37
+      - run: 
           name: tests
           command: npm test
       - contrastsecurity/check-vulnerabilities:
