@@ -1,7 +1,7 @@
 version: 2.1
 
-orbs:
-  contrastsecurity: contrastsecurity/verify@0.3.0
+# orbs:
+#   contrastsecurity: contrastsecurity/verify@0.3.0
 
 jobs:
   hello-job:
