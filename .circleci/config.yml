@@ -15,11 +15,11 @@ jobs:
       - checkout # check out the code in the project directory
       - run:
           name: npm config
-          command: npm -g config set registry https://registry.npmjs.org/ |
-                  npm -g config set strict-ssl false
+          command: npm config set registry https://registry.npmjs.org/ |
+                  npm config set strict-ssl false
       - run: 
           name: install-dependencies 
-          command: npm install 
+          command: npm install --verbose
       - run: 
           name: install-contrast 
           command: npm install @contrast/agent@4.37
