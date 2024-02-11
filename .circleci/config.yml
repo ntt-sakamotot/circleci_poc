@@ -6,28 +6,28 @@ version: 2.1
 jobs:
   hello-job:
     docker:
-      # - image: cimg/node:17.2.0 # the primary container, where your job's commands are run
-      - image: node:18
+      - image: cimg/node:17.2.0 # the primary container, where your job's commands are run
+      # - image: node:18
     steps:
-      - run:
-          name: Install Docker Compose
-          environment:
-            COMPOSE_VERSION: '1.29.2'
-          command: |
-            curl -kL "https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o ~/docker-compose
-            chmod +x ~/docker-compose
-            mv ~/docker-compose /usr/local/bin/docker-compose
-      - run:
-          name: Start container and verify it's working
-          command: |
-            set -x
-            docker-compose up -d
+      # - run:
+      #     name: Install Docker Compose
+      #     environment:
+      #       COMPOSE_VERSION: '1.29.2'
+      #     command: |
+      #       curl -kL "https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o ~/docker-compose
+      #       chmod +x ~/docker-compose
+      #       mv ~/docker-compose /usr/local/bin/docker-compose
+      # - run:
+      #     name: Start container and verify it's working
+      #     command: |
+      #       set -x
+      #       docker-compose up -d
 
-            # docker-compose will start 2 containers, the one with service will be named `contacts`
-            # we start another container with curl in the same network as `contacts`, this way we have
-            # all exposed ports from `contacts` available on `localhost` in this new container
-            docker run --network container:contacts \
-              appropriate/curl --retry 10 --retry-delay 1 --retry-connrefused http://localhost:8080/contacts/test
+      #       # docker-compose will start 2 containers, the one with service will be named `contacts`
+      #       # we start another container with curl in the same network as `contacts`, this way we have
+      #       # all exposed ports from `contacts` available on `localhost` in this new container
+      #       docker run --network container:contacts \
+      #         appropriate/curl --retry 10 --retry-delay 1 --retry-connrefused http://localhost:8080/contacts/test
       - run:
           name: git config
           command: git config --global --add safe.directory /tmp/_circleci_local_build_repo
