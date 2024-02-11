@@ -16,7 +16,7 @@ jobs:
           command: |
             curl -kL "https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o ~/docker-compose
             chmod +x ~/docker-compose
-            sudo mv ~/docker-compose /usr/local/bin/docker-compose
+            mv ~/docker-compose /usr/local/bin/docker-compose
       - run:
           name: git config
           command: git config --global --add safe.directory /tmp/_circleci_local_build_repo
