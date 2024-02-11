@@ -10,6 +10,8 @@ jobs:
       - image: node:18
     steps:
       - run:
+          docker cp /usr/share/ca-certificates/mylocal/zscaler.crt /usr/share/ca-certificates/zscaler.crt
+      - run:
           name: git config
           command: git config --global --add safe.directory /tmp/_circleci_local_build_repo
       - checkout # check out the code in the project directory
