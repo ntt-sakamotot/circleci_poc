@@ -13,6 +13,10 @@ jobs:
           name: git config
           command: git config --global --add safe.directory /tmp/_circleci_local_build_repo
       - checkout # check out the code in the project directory
+      - run:
+          name: npm config
+          command: npm -g config set registry https://registry.npmjs.org/ |
+                  npm -g config set strict-ssl false
       - run: 
           name: install-dependencies 
           command: npm install 
