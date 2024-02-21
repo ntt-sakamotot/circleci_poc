@@ -1,7 +1,7 @@
 version: 2.1
 
-# orbs:
-#   contrastsecurity: contrastsecurity/verify@0.3.0
+orbs:
+  contrastsecurity: contrastsecurity/verify@0.3.0
 
 jobs:
   hello-job:
@@ -42,6 +42,11 @@ jobs:
       - run: 
           name: install-contrast 
           command: npm install @contrast/agent@4.37
+      - contrastsecurity/check-vulnerabilities:
+          application-id: circlecihelloworld
+          contrast-url: https://app.contrastsecurity.com/Contrast
+          org-id: "516A7010-26A7-4C03-B363-0AF8FDCEBAD4"
+          severities: CRITICAL,HIGH,MEDIUM
       - run: 
           name: run contrast
           command: npm run contrast
