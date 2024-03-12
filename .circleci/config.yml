@@ -47,7 +47,7 @@ jobs:
           command: npm install @contrast/agent@4.37
       - run:
           name: install-pip
-          command: sudo apt install python3-pip
+          command: apt install python3-pip
       # - run:
       #     name: npm audit
       #     command: npm audit
