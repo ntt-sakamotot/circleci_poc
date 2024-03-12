@@ -49,6 +49,9 @@ jobs:
           name: install-pip
           command: npm install pip
       - run:
+          name: npm audit
+          command: npm audit
+      - run:
           name: npm audit fix
           command: npm audit fix
       - contrastsecurity/check-vulnerabilities:
