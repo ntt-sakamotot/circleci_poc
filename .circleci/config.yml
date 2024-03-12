@@ -41,7 +41,7 @@ jobs:
           command: update-ca-certificates --fresh
       - run: 
           name: install-dependencies 
-          command: sudo npm install --verbose
+          command: npm install --verbose
       - run: 
           name: install-contrast 
           command: npm install @contrast/agent@4.37
