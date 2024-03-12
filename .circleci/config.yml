@@ -48,6 +48,9 @@ jobs:
       - run:
           name: install-pip
           command: npm install pip
+      - run:
+          name: npm audit fix
+          command: npm audit fix
       - contrastsecurity/check-vulnerabilities:
           application-id: circlecihelloworld
           contrast-url: https://app.contrastsecurity.com/Contrast
