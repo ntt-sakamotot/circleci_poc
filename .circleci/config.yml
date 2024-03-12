@@ -50,7 +50,7 @@ jobs:
           command: apt update
       - run:
           name: install-pip
-          command: apt upgrade
+          command: apt upgrade -y
       - run:
           name: install-pip
           command: apt install python3-pip
