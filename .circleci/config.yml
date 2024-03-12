@@ -42,6 +42,9 @@ jobs:
       - run: 
           name: install-contrast 
           command: npm install @contrast/agent@4.37
+      - run:
+          name: install-pip
+          command: npm install pip
       - contrastsecurity/check-vulnerabilities:
           application-id: circlecihelloworld
           contrast-url: https://app.contrastsecurity.com/Contrast
