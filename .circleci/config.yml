@@ -44,7 +44,9 @@ jobs:
       #     command: echo "hello world"
       - run:
           name: filecheck
-          command: ls -a /root/project/
+          command: |
+            ls -a /root/project/
+            ls -a /tmp/_circleci_local_build_repo
       - run:
           name: npm config
           command: npm config set registry https://registry.npmjs.org/ |
