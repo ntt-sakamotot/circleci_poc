@@ -39,6 +39,8 @@ jobs:
               cd /tmp/_circleci_local_build_repo
               git init
       - checkout # check out the code in the project directory
+      - run: git submodule sync
+      - run: git submodule update --init
       # - run:
       #     name: Hello World
       #     command: echo "hello world"
