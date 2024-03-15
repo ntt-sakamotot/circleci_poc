@@ -78,7 +78,7 @@ jobs:
           command: apt upgrade -y
       - run:
           name: install-pip
-          command: apt -y install python3-pip
+          command: apt -y install --break-system-packages python3-pip
       # - run:
       #     name: npm audit
       #     command: npm audit
