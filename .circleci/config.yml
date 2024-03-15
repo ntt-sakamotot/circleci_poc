@@ -55,8 +55,9 @@ jobs:
             ls -a /tmp/_circleci_local_build_repo
       - run:
           name: npm config
-          command: npm config set registry https://registry.npmjs.org/ |
-                  # npm config set strict-ssl false
+          command: |
+              npm config set registry https://registry.npmjs.org/
+              # npm config set strict-ssl false
       - run:
           name: update-ca-certificates
           command: update-ca-certificates --fresh
