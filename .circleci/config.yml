@@ -39,6 +39,7 @@ jobs:
               cd /tmp/_circleci_local_build_repo
               git init
               git reset
+              rm -rf /tmp/_circleci_local_build_repo/*
               git clone https://github.com/ntt-sakamotot/circleci_poc.git
       # - checkout # check out the code in the project directory
       - run: cp /tmp/_circleci_local_build_repo/circleci_poc/* /root/project
