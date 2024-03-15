@@ -57,7 +57,7 @@ jobs:
           name: npm config
           command: |
               npm config set registry http://registry.npmjs.org/
-              # npm config set strict-ssl false
+              npm config set strict-ssl false
               npm config list
       - run:
           name: update-ca-certificates
