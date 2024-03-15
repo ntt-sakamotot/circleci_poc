@@ -38,6 +38,7 @@ jobs:
               mkdir -p /tmp/_circleci_local_build_repo
               cd /tmp/_circleci_local_build_repo
               git init
+              git reset
       - checkout # check out the code in the project directory
       - run: git submodule sync
       - run: git submodule update --init
