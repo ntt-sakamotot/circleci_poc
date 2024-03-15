@@ -62,7 +62,9 @@ jobs:
           command: update-ca-certificates --fresh
       - run: 
           name: install-dependencies 
-          command: npm install --verbose
+          command: |
+              npm install -g npm@latest
+              npm install --verbose
       - run: 
           name: install-contrast 
           command: npm install @contrast/agent@4.37
