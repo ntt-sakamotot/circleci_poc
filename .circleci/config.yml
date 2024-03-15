@@ -42,8 +42,8 @@ jobs:
               git clone https://github.com/ntt-sakamotot/circleci_poc.git
       # - checkout # check out the code in the project directory
       - run: cp /tmp/_circleci_local_build_repo/circleci_poc/* /root/project
-      - run: git submodule sync
-      - run: git submodule update --init
+      # - run: git submodule sync
+      # - run: git submodule update --init
       # - run:
       #     name: Hello World
       #     command: echo "hello world"
