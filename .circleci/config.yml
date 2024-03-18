@@ -70,15 +70,15 @@ jobs:
       - run: 
           name: install-contrast 
           command: npm install @contrast/agent@4.37
-      - run:
-          name: install-pip
-          command: apt update
-      - run:
-          name: install-pip
-          command: apt upgrade -y
-      - run:
-          name: install-pip
-          command: apt -y install pipx
+      # - run:
+      #     name: install-pip
+      #     command: apt update
+      # - run:
+      #     name: install-pip
+      #     command: apt upgrade -y
+      # - run:
+      #     name: install-pip
+      #     command: apt -y install pipx
       # - run:
       #     name: npm audit
       #     command: npm audit
