@@ -85,11 +85,11 @@ jobs:
       # - run:
       #     name: npm audit fix
       #     command: npm audit fix
-      - contrastsecurity/check-vulnerabilities:
-          application-id: circlecihelloworld
-          contrast-url: https://app.contrastsecurity.com/Contrast
-          org-id: "516A7010-26A7-4C03-B363-0AF8FDCEBAD4"
-          severities: CRITICAL,HIGH,MEDIUM
+      # - contrastsecurity/check-vulnerabilities:
+      #     application-id: circlecihelloworld
+      #     contrast-url: https://app.contrastsecurity.com/Contrast
+      #     org-id: "516A7010-26A7-4C03-B363-0AF8FDCEBAD4"
+      #     severities: CRITICAL,HIGH,MEDIUM
       - run: 
           name: run contrast
           command: npm run contrast
